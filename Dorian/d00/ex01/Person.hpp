@@ -8,20 +8,21 @@ class Person {
         int         getNbInst(void);
         void        setInfo(const std::string s, int index);
         std::string getPublicInfo(void);
+        std::string getTotalInfo(void);
 
 
 
     private:
         int         _nbInst;
-        std::string firstName;
-        std::string lastName;
-        std::string nickname;
-        std::string login;
-        std::string postal;
-        std::string email;
-        std::string phoneNumber;
-        std::string birthdayDate;
-        std::string favoriteMeal;
-        std::string underwear;
-        std::string secret;
+        std::string _firstName;
+        std::string _lastName;
+        std::string _nickname;
+        std::string _login;
+        std::string _postal;
+        std::string _email;
+        std::string _phoneNumber;
+        std::string _birthdayDate;
+        std::string _favoriteMeal;
+        std::string _underwear;
+        std::string _secret;
 };

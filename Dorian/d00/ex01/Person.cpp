@@ -15,27 +15,27 @@ void     Person::setInfo(const std::string s, int index)
     switch (index)
     {
         case 1:
-            this->firstName = s;
+            this->_firstName = s;
         case 2:
-            this->lastName = s;
+            this->_lastName = s;
         case 3:
-            this->nickname = s;
+            this->_nickname = s;
         case 4:
-            this->login = s;
+            this->_login = s;
         case 5:
-            this->postal = s;
+            this->_postal = s;
         case 6:
-            this->email = s;
+            this->_email = s;
         case 7:
-            this->phoneNumber = s;
+            this->_phoneNumber = s;
         case 8:
-            this->birthdayDate = s;
+            this->_birthdayDate = s;
         case 9:
-            this->favoriteMeal = s;
+            this->_favoriteMeal = s;
         case 10:
-            this->underwear = s;
+            this->_underwear = s;
         case 11:
-            this->secret = s;
+            this->_secret = s;
         default:
             ;
     }
@@ -43,5 +43,13 @@ void     Person::setInfo(const std::string s, int index)
 
 std::string Person::getPublicInfo(void)
 {
-    return this->firstName + ";" + this->lastName + ";" + this->nickname;
+    return this->_firstName + ";" + this->_lastName + ";" + this->_nickname;
+}
+
+std::string Person::getTotalInfo(void)
+{
+    return this->_firstName + ";" + this->_lastName + ";" + this->_nickname
+    + ";" + this->_login + ";" + this->_postal + ";" + this->_email + ";"
+    + this->_phoneNumber + ";" + this->_birthdayDate + ";" + this->_favoriteMeal
+    + ";" + this->_underwear + ";" + this->_secret;
 }
