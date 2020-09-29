@@ -6,12 +6,11 @@
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 17:36:34 by bmellon           #+#    #+#             */
-/*   Updated: 2020/09/28 20:25:17 by bmellon          ###   ########.fr       */
+/*   Updated: 2020/09/29 21:10:21 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
-#include <iostream>
 
 std::string Contact::getFirstname(void) const
 {
@@ -126,22 +125,25 @@ void		Contact::setDarkestsecret(std::string darkest_secret)
 int			Contact::nbcontact = 0;
 
 
+
 Contact Contact::add_contact(void)
 {
+	Contact ct;
+
 	std::string		buff;
 	Contact::nbcontact += 1;
 
 	std::cout << "Input first name";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setFirstname(buff);
+	ct.Contact::setFirstname(buff);
 	
 	std::cout << "Input last name";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setLastname(buff);
+	ct.Contact::setLastname(buff);
 	
 	std::cout << "Input Nickname";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setNickname(buff);
+	ct.Contact::setNickname(buff);
 	
 	std::cout << "Input login";
 	std::getline(std::cin >> std::ws, buff);
@@ -149,33 +151,31 @@ Contact Contact::add_contact(void)
 	
 	std::cout << "Input postal address";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setPostaladdr(buff);
-
-	std::cout << "Input postal address";
-	std::getline(std::cin >> std::ws, buff);
-	Contact::setPostaladdr(buff);
+	ct.Contact::setPostaladdr(buff);
 	
 	std::cout << "Input email";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setEmail(buff);
+	ct.Contact::setEmail(buff);
 	
 	std::cout << "Input phone";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setPhone(buff);
+	ct.Contact::setPhone(buff);
 
 	std::cout << "Input birthday";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setBirthday(buff);
+	ct.Contact::setBirthday(buff);
 
 	std::cout << "Input favorite meal";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setFavmeal(buff);
+	ct.Contact::setFavmeal(buff);
 
 	std::cout << "Input underwear color";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setUnderwearcolor(buff);
+	ct.Contact::setUnderwearcolor(buff);
 
 	std::cout << "Input your darkest secret";
 	std::getline(std::cin >> std::ws, buff);
-	Contact::setDarkestsecret(buff);
+	ct.Contact::setDarkestsecret(buff);
+
+	return (ct);
 }
