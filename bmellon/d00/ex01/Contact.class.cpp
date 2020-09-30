@@ -6,7 +6,7 @@
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 17:36:34 by bmellon           #+#    #+#             */
-/*   Updated: 2020/09/29 21:10:21 by bmellon          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:52:26 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ int			Contact::nbcontact = 0;
 
 Contact Contact::add_contact(void)
 {
+
 	Contact ct;
 
 	std::string		buff;
