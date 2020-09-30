@@ -6,13 +6,14 @@
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 17:36:36 by bmellon           #+#    #+#             */
-/*   Updated: 2020/09/28 20:23:19 by bmellon          ###   ########.fr       */
+/*   Updated: 2020/09/29 21:00:24 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_CLASS_HPP
 #define CONTACT_CLASS_HPP
 #include <iostream>
+#include <iomanip>
 
 class Contact{
 
@@ -42,8 +43,6 @@ public:
 	void		setDarkestsecret(std::string darkest_secret);
 	static	int	nbcontact;
 	Contact		add_contact(void);
-
-private :
 	std::string _first_name;
 	std::string _last_name;
 	std::string _nickname;

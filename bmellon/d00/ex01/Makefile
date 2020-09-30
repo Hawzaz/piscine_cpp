@@ -6,7 +6,7 @@
 #    By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 17:08:51 by bmellon           #+#    #+#              #
-#    Updated: 2020/09/28 17:09:54 by bmellon          ###   ########.fr        #
+#    Updated: 2020/09/30 15:12:09 by bmellon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,17 @@ CC		= clang++
 
 FLAGS	= -Wextra -Wall -Werror
 
-SRC		= phonebook.cpp 
+SRC		= MyAwesomePhoneBook.cpp Contact.class.cpp
 
-all		:	$(NAME)
-			@echo "My Awesome Phonebook is ready"
-
-$(NAME) = @$(CC) $(FLAGS) -o $(NAME) $(SRC)
+all		:	
+			$(CC) $(FLAGS) $(SRC) *.hpp
+			mv a.out MyAwesomePhoneBook
 
 clean	: 
 			@rm -f $(NAME)
 
 re		: clean all
+
+.PHONY	:	all, clean, fclean, re
+
+.SILENT:
