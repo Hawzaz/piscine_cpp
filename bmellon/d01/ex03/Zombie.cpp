@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/30 16:23:01 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/04 16:25:29 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/04 17:48:39 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/04 17:48:40 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
 
-#ifndef PONY_HPP
-#define PONY_HPP
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type)
+{
+	this->announce();
+}
 
-#include <iostream>
+Zombie::~Zombie()
+{
+	std::cout << "<" << this->_name << " (" << this->_type << ")> Vanished" << std::endl; 
+}
 
-class Pony{
-	private :
-		std::string color;
-	public	:
-	Pony(std::string color) : color(color)
-	{
-		std::cout << "The " << this->color << " pony is now born" << std::endl;
-	}
-	~Pony()
-	{
-		std::cout << "The " << this->color << " pony is now dead" << std::endl;
-	}
-	void PonyOnTheHeap(void);
-	void PonyOnTheStack(void);
-};
-
-#endif
+void	Zombie::announce(void)
+{
+	std::cout << "<" << this->_name << " (" << this->_type << ")> Braaains.." << std::endl; 
+}

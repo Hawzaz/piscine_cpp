@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/30 16:23:01 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/04 16:25:29 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/04 16:46:57 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/04 17:37:34 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef PONY_HPP
-#define PONY_HPP
+#ifndef ZOMBIEVENT_HPP
+#define ZOMBIEVENT_HPP
 
 #include <iostream>
+#include "Zombie.hpp"
 
-class Pony{
+class ZombieEvent{
+	public :
+		void setZombieType(std::string ZombieType);
+		Zombie* newZombie(std::string name);
+		void	randomChump(void);
 	private :
-		std::string color;
-	public	:
-	Pony(std::string color) : color(color)
-	{
-		std::cout << "The " << this->color << " pony is now born" << std::endl;
-	}
-	~Pony()
-	{
-		std::cout << "The " << this->color << " pony is now dead" << std::endl;
-	}
-	void PonyOnTheHeap(void);
-	void PonyOnTheStack(void);
+		std::string _type;
 };
-
 #endif
