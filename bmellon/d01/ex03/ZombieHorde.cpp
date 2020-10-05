@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/30 16:23:01 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/04 16:25:29 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/04 17:50:54 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/04 18:46:12 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ZombieHorde.hpp"
+#include "Zombie.hpp"
 
-#ifndef PONY_HPP
-#define PONY_HPP
+ZombieHorde::ZombieHorde(int n)
+{
 
-#include <iostream>
-
-class Pony{
-	private :
-		std::string color;
-	public	:
-	Pony(std::string color) : color(color)
-	{
-		std::cout << "The " << this->color << " pony is now born" << std::endl;
-	}
-	~Pony()
-	{
-		std::cout << "The " << this->color << " pony is now dead" << std::endl;
-	}
-	void PonyOnTheHeap(void);
-	void PonyOnTheStack(void);
-};
-
-#endif
+	Zombie *zombtab = new Zombie[n];
+	this->p = zombtab;
+	std::string zombies[3] = {"bmellon", "dbaffier", "lomasse"};
+	for (int i = 0; i < n; i++)
+		Zombie z = Zombie(zombies[std::rand() % 3], "stack");
+}
