@@ -6,7 +6,7 @@
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 17:49:21 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/04 18:44:12 by bmellon          ###   ########.fr       */
+/*   Updated: 2020/10/05 18:43:37 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ class ZombieHorde{
 	public :
 		ZombieHorde(int n);
 		~ZombieHorde();
+		void	announce();
 	private :
-		Zombie *p;
+		int		_count;
+		Zombie *_p;
 };

@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 17:48:39 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/05 18:24:16 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/05 19:17:57 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/05 20:22:10 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <sstream>
+#include "Brain.hpp"
 
-Zombie::Zombie()
+std::string		Brain::identify() const
 {
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Vanished" << std::endl; 
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Braaains.." << std::endl; 
-}
-
-void Zombie::setName(std::string name)
-{
-	this->_name = name;
-}
-
-void Zombie::setType(std::string type)
-{
-	this->_type = type;
+	std::stringstream strm;
+	std::string &ref = _addr;
+	const void *addr = this;
+	strm << addr;
+	return (ref = strm.str());
 }

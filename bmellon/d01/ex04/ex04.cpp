@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 17:48:39 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/05 18:24:16 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/05 18:46:59 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/05 18:58:22 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie::Zombie()
+#include <iostream>
+int main()
 {
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Vanished" << std::endl; 
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << "<" << this->_name << " (" << this->_type << ")> Braaains.." << std::endl; 
-}
-
-void Zombie::setName(std::string name)
-{
-	this->_name = name;
-}
-
-void Zombie::setType(std::string type)
-{
-	this->_type = type;
+	std::string s = "HI THIS IS BRAIN";
+	std::string *p = &s;
+	std::string &r = s;
+	std::cout << "POINTER " << *p << std::endl << "REFERENCE " << r <<std::endl;
+	return 1;
 }
