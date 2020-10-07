@@ -5,29 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 18:05:38 by bmellon           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/10/04 18:05:56 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/06 15:53:25 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/06 18:28:12 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		main(void)
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+
+int main() {
 {
-=======
-/*   Updated: 2020/10/05 18:46:04 by bmellon          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ZombieHorde.hpp"
-#include "Zombie.hpp"
-
-int		main(void)
+	Weapon        club = Weapon("crude spiked club");
+	HumanA bob("Bob", club);
+	bob.attack();
+	club.setType("some other type of club");
+	bob.attack();
+}
 {
-	int n;
-
-	n = 7;
-	ZombieHorde z = ZombieHorde(n);
-	z.announce();
->>>>>>> 14418afe8a1ab519f63b7636dc30f5c350c7c7f0
-	return 1;
+	Weapon        club = Weapon("crude spiked club");
+	HumanB jim("Jim");
+	jim.setWeapon(club);
+	jim.attack();
+	club.setType("some other type of club");
+	jim.attack();
+}
+return 1;
 }

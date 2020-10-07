@@ -5,29 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 18:05:38 by bmellon           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/10/04 18:05:56 by bmellon          ###   ########.fr       */
+/*   Created: 2020/10/05 19:17:42 by bmellon           #+#    #+#             */
+/*   Updated: 2020/10/05 19:58:29 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		main(void)
+#include "Human.hpp"
+
+int main ()
 {
-=======
-/*   Updated: 2020/10/05 18:46:04 by bmellon          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "ZombieHorde.hpp"
-#include "Zombie.hpp"
-
-int		main(void)
-{
-	int n;
-
-	n = 7;
-	ZombieHorde z = ZombieHorde(n);
-	z.announce();
->>>>>>> 14418afe8a1ab519f63b7636dc30f5c350c7c7f0
-	return 1;
+	Human bob;
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
 }
