@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   MyAwesomePhoneBook.hpp                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/06 15:53:32 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/07 13:55:13 by bmellon          ###   ########.fr       */
+/*   Created: 2020/09/29 20:57:32 by bmellon           #+#    #+#             */
+/*   Updated: 2020/09/29 20:58:54 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#ifndef MYAWESOMEPHONEBOOK_HPP
+#define MYAWESOMEPHONEBOOK_HPP
 
-HumanB::HumanB(std::string name) : _name(name)
-{
-}
+#include <iostream>
+#include "Contact.class.hpp"
 
-void	HumanB::setWeapon(Weapon& weap)
-{
-	this->_weap = &weap;
-}
-
-void	HumanB::attack(void)
-{
-	std::cout << this->_name << " attacks with his " << this->_weap->getType() << std::endl;
-}
+void		search_contact(Contact contact[], int nbcontact);
+#endif

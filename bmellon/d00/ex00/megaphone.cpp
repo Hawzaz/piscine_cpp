@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmellon <bmellon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/06 15:53:32 by bmellon           #+#    #+#             */
-/*   Updated: 2020/10/07 13:55:13 by bmellon          ###   ########.fr       */
+/*   Created: 2020/09/28 15:46:45 by bmellon           #+#    #+#             */
+/*   Updated: 2020/09/28 15:59:35 by bmellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#include <stdio.h>
+#include <iostream>
 
-HumanB::HumanB(std::string name) : _name(name)
+int	main(int ac, char **av)
 {
-}
+	int	i;
+	int	j;
 
-void	HumanB::setWeapon(Weapon& weap)
-{
-	this->_weap = &weap;
-}
-
-void	HumanB::attack(void)
-{
-	std::cout << this->_name << " attacks with his " << this->_weap->getType() << std::endl;
+	i = 1;
+	if (ac <= 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (av[i][j] >= 97 && av[i][j] <= 122)
+				av[i][j] -= 32;
+			j++;
+		}
+		i++;
+	}
+	i = 1;
+	while (av[i])
+		std::cout << av[i++];
+	std::cout << "\n";
+	return (1);
 }
